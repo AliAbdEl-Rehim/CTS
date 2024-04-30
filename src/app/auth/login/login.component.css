@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-weight: bold;
+	color: #363636;
+}
+
+::-webkit-scrollbar{
+	display: none;
+}
+
+::selection{
+	background: 0;
+}
+
+.main {
+	width: 100%;
+	min-height: 460px;
+	height: 100vh;
+	overflow: scroll;
+	background: url("https://i.pinimg.com/564x/0e/58/17/0e5817b2f5a8e955103255569de24896.jpg")
+		no-repeat center center;
+	background-size: cover;
+	backdrop-filter: blur(7px);
+	display: grid;
+	place-content: center;
+}
+
+.container {
+	width: 100%;
+	min-height:420px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 630px;
+	height: 76vh;
+}
+
+.banner {
+	max-height:420px;
+	height: 100%;
+	width: 350px;
+	background: rgb(103 219 198);
+	border-radius: 10px 0 0 10px;
+	transition: .4s;
+	font-family: sans-serif;
+}
+
+.banner * {
+	/* margin: 40px; */
+	color: #ccc;
+	cursor: default;
+}
+
+.form {
+	max-height:420px;
+	height: 100%;
+	width: 280px;
+	background: #000;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 0 10px 10px 0;
+	position: relative;
+}
+
+.right-align-placeholder {
+    direction: rtl;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.form small:first-of-type{
+    pointer-events: none;
+    margin: 45px 0 20px;
+    height: 70px;
+    color: #646464;
+}
+
+a {
+	font-size: small;
+	color: #1663be;
+	cursor: pointer;
+}
+
+input {
+	margin-bottom: 10px;
+	padding: 8px 15px;
+	width: 212px;
+	border: 2px solid #ccc;
+	color: #000;
+	font-weight: bold;
+	border-radius: 8px;
+}
+
+input:focus {
+	outline: 0;
+	transition: 0.5s;
+	border: 2px solid #646464;
+}
+
+/* ::-ms-reveal {
+	filter: invert(100%);
+} */
+
+button {
+	min-width: 215px;
+	min-height: 38px;
+	border: 2px solid #142b54;
+	background: #142b54;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 8px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	margin: 0 0 50px 0;
+}
+.equal-line-length {
+    text-align: center;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    width: 50%;
+    padding: 10px;
+
+}
+
+h3 {
+    text-align: right;
+    font-size: 16px;
+    margin-top: 10%;
+}
+
+.banner img {
+	pointer-events: none;
+	height: 70px;
+	border-radius: 50%;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	margin-bottom: 25%;
+}
+.banner h1 {
+	margin: auto;
+}
+
+button:active {
+	transform: scale(1.05);
+	box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+#forgot{
+	opacity: .6;
+    color: #fff;
+}
+
+#forgot:hover{
+	opacity: 1;
+}
+
+@media (max-width: 720px) {
+	.banner {
+		position: absolute;
+		transform: translatex(10%);
+		opacity: 0;
+	}
+	.content {
+		display: flex;
+		justify-content: center;
+	}
+
+	.form {
+		border-radius: 10px;
+	}
+
+}
+/* login-error-modal.component.css */
+.modal-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.5); /* Dim the background */
+	z-index: 10; /* Make sure it's above other items */
+  }
+
+  .modal {
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	width: 40%; /* Adjust the width as needed */
+	max-width: 90%; /* Make sure it doesn't get too wide on small screens */
+  }
+
+  .modal-header {
+	display: flex;
+	justify-content: flex-end;
+	padding: 0.5em;
+  }
+
+  .close-button {
+	background: none;
+	border: none;
+	font-size: 1.5em;
+	cursor: pointer;
+  }
+
+  .modal-body {
+	padding: 1em;
+	text-align: center;
+  }
+
+  .modal-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1em; /* This adds space between your items */
+  }
+
+  .error-icon {
+	height: auto; /* Keep the aspect ratio of the image */
+	max-width: 100%; /* Ensure the image is not too wide */
+	max-height: 150px; /* Adjust this value based on your image size */
+  }
+
+/* Styles specific to the modal content */
+.modal-content h2 {
+	margin-top: 20px; /* Space above the h2 */
+	margin-bottom: 20px; /* Space below the h2 */
+  }
+
+  .modal-content p {
+	margin-top: 10px; /* Space above the p */
+	margin-bottom: 10px; /* Space below the p */
+  }
+
+  .modal-content button {
+	margin-top: 20px; /* Space above the button */
+	padding: 10px 20px; /* Padding inside the button */
+	font-size: 1rem; /* Text size inside the button */
+	/* Other styles for your button */
+  }
+
+  /* Adjust the size of the error icon as needed */
+  .modal-content .error-icon {
+	width: auto; /* Adjust width automatically */
+	height: 150px; /* Set a fixed height for the icon */
+	margin-bottom: 20px; /* Space below the icon */
+  }
+
+
+  .modal-content button:hover {
+	background-color: #0056b3;
+  }
